@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>Prediction</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal">Prediction</h1>
+            <h4><b>{{prediction_text}}</b></h4><br>
+        </div>
+        
+        <a class="btn btn-primary btn-lg" href="/" role="button">Back</a><br><br>
+        <form action="/prediction" method="POST">
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="TotalCharges" name="TotalCharges" class="form-control" placeholder="Total Charges" aria-label="Total Charges">
+                </div>
+                <div class="col">
+                    <input type="text" id="tenure" name="tenure" class="form-control" placeholder="Tenure" aria-label="Tenure">
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="MonthlyCharges" name="MonthlyCharges" class="form-control" placeholder="Monthly Charges" aria-label="Monthly Charges">
+                </div>
+                <div class="col">
+                    <input type="text" id="Contract_Two_year" name="Contract_Two_year" class="form-control" placeholder="Contract Two Year (1/0)" aria-label="Contract Two Year (1/0)">
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="PaymentMethod_Electronic_check" name="PaymentMethod_Electronic_check" class="form-control" placeholder="Electronic Check (1/0)" aria-label="Electronic Check (1/0)">
+                </div>
+                <div class="col">
+                    <input type="text" id="InternetService_Fiber_optic" name="InternetService_Fiber_optic" class="form-control" placeholder="Fiber Optic (1/0)" aria-label="Fiber Optic (1/0)">
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="Contract_One_year" name="Contract_One_year" class="form-control" placeholder="Contract One Year (1/0)" aria-label="Contract One Year (1/0)">
+                </div>
+                <div class="col">
+                    <input type="text" id="OnlineSecurity_Yes" name="OnlineSecurity_Yes" class="form-control" placeholder="Online Security Yes (1/0)" aria-label="Online Security Yes (1/0)">
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="PaperlessBilling" name="PaperlessBilling" class="form-control" placeholder="Paperless Billing (1/0)" aria-label="Paperless Billing (1/0)">
+                </div>
+                <div class="col">
+                    <input type="text" id="TechSupport_Yes" name="TechSupport_Yes" class="form-control" placeholder="Tech Support Yes (1/0)" aria-label="Tech Support Yes (1/0)">
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="OnlineBackup_Yes" name="OnlineBackup_Yes" class="form-control" placeholder="Online Backup Yes (1/0)" aria-label="Online Backup Yes (1/0)">
+                </div>
+                <div class="col">
+                    <input type="text" id="Partner" name="Partner" class="form-control" placeholder="Partner (1/0)" aria-label="Partner (1/0)">
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="Dependents" name="Dependents" class="form-control" placeholder="Dependents (1/0)" aria-label="Dependents (1/0)">
+                </div>
+                <div class="col">
+                    <input type="text" id="MultipleLines_Yes" name="MultipleLines_Yes" class="form-control" placeholder="Multiple Lines Yes (1/0)" aria-label="Multiple Lines Yes (1/0)">
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="StreamingTV_Yes" name="StreamingTV_Yes" class="form-control" placeholder="Streaming TV Yes (1/0)" aria-label="Streaming TV Yes (1/0)">
+                </div>
+                <div class="col">
+                    <input type="text" id="StreamingMovies_Yes" name="StreamingMovies_Yes" class="form-control" placeholder="Streaming Movies Yes (1/0)" aria-label="Streaming Movies Yes (1/0)">
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="DeviceProtection_Yes" name="DeviceProtection_Yes" class="form-control" placeholder="Device Protection Yes (1/0)" aria-label="Device Protection Yes (1/0)">
+                </div>
+                <div class="col">
+                    <input type="text" id="PaymentMethod_Credit_card_automatic" name="PaymentMethod_Credit_card_automatic" class="form-control" placeholder="Credit Card Automatic (1/0)" aria-label="Credit Card Automatic (1/0)">
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="PaymentMethod_Mailed_check" name="PaymentMethod_Mailed_check" class="form-control" placeholder="Mailed Check (1/0)" aria-label="Mailed Check (1/0)">
+                </div>
+                <div class="col">
+                    <input type="text" id="StreamingTV_No_internet_service" name="StreamingTV_No_internet_service" class="form-control" placeholder="Streaming TV No Internet Service (1/0)" aria-label="Streaming TV No Internet Service (1/0)">
+                </div>
+            </div><br>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form><br><br><br><br><br>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
